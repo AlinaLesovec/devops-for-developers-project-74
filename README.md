@@ -1,4 +1,4 @@
-![CI](https://github.com/liisuu78/devops-for-developers-project-74/actions/workflows/push.yml/badge.svg)
+![CI](https://github.com/AlinaLesovec/devops-for-developers-project-74/actions/workflows/push.yml/badge.svg)
 
 # JS Fastify Blog
 
