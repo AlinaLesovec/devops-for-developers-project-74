@@ -1,6 +1,7 @@
 services:
   app:
-    image: node:20.12.2
+    image: liisuu78/devops-for-developers-project-74
+    build: .
     working_dir: /root
     volumes:
       - .:/root
