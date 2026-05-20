@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+![CI](https://github.com/liisuu78/devops-for-developers-project-74/actions/workflows/push.yml/badge.svg)
 # JS Fastify Blog
 
 [![Main](https://github.com/hexlet-components/js-fastify-blog/actions/workflows/main.yml/badge.svg)](https://github.com/hexlet-components/js-fastify-blog/actions/workflows/main.yml)
