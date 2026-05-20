@@ -1,46 +1,60 @@
-![CI](https://github.com/AlinaLesovec/devops-for-developers-project-74/actions/workflows/push.yml/badge.svg)
-
 # JS Fastify Blog
 
-[![Main](https://github.com/hexlet-components/js-fastify-blog/actions/workflows/main.yml/badge.svg)](https://github.com/hexlet-components/js-fastify-blog/actions/workflows/main.yml)
+## Hexlet tests and linter status
 
-## Requirement
+![CI](https://github.com/AlinaLesovec/devops-for-developers-project-74/actions/workflows/push.yml/badge.svg)
 
-* NodeJS v20.6.1
-* Sqlite или PostgreSQL
+## Проект: Упаковка в Docker Compose
 
-## Commands
+Блог создан с помощью Fastify с Docker и CI/CD
+
+## Docker Hub
+
+Образ приложения:
+
+liisuu78/devops-for-developers-project-74
+
+## Требования
+
+- Docker
+- Docker Compose
+- Make
+
+## Использованные технологии
+
+- Fastify — веб-фреймворк
+- PostgreSQL — БД
+- Caddy — reverse proxy с HTTPS
+- Docker — контейнеризация проекта
+- GitHub Actions — CI/CD
+
+## Структура проекта
+
+- app/ — исходник приложения
+- services/caddy/ — конфиг Caddy
+- Dockerfile — разработка
+- Dockerfile.production — production
+- docker-compose.yml — тесты
+- docker-compose.override.yml — разработка
+
+## Установка
 
 ```bash
-make install
-make dev
-Run tests with Postgres
-To run tests with Postgres, you need to edit config/config.cjs and under the test key comment out the use of SQLite and uncomment the environment variables
- // test: {
-//   dialect: 'sqlite',
-//   storage: './database.test.sqlite',
-// },
-test: {
-  dialect: 'postgres',
-  database: process.env.DATABASE_NAME,
-  username: process.env.DATABASE_USERNAME,
-  password: process.env.DATABASE_PASSWORD,
-  port: process.env.DATABASE_PORT,
-  host: process.env.DATABASE_HOST,
-},
- Specify environment variables manually or prepare a .env file with the command
- make prepare-env
-In it specify the data to connect to the database
-DATABASE_NAME=postgres
-DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=postgres
-DATABASE_PORT=5432
-DATABASE_HOST=localhost
-Running an application with Postgres (production)
-Export environment variables to work with the database or prepare a .env file with variables
-Run
-make build # build assets
-make start # Open in browser: http://localhost:8080
-This repository is created and maintained by the team and the community of Hexlet, an educational project. Read more about Hexlet.
-See most active contributors on hexlet-friends.
+make dev-setup
+## Запуск
 
+```bash
+make dev
+```
+
+Приложение доступно:
+
+http://localhost
+
+https://localhost
+
+## Тесты
+
+```bash
+make tests
+```
